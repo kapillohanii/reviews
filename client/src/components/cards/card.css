@@ -1,0 +1,66 @@
+/* $lightgray: #D6D6D6;
+$gray: #333533;
+$black: #202020;
+$gold: #FFD100;
+$yellow: #FFEE32;
+$white: #fff;
+$discord: #7289d9;
+$linkedin: #0e76a8;
+$orange: #feb109; */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  height: fit-content;
+
+  #contact-title {
+    font-family: "Comics", sans-serif;
+    letter-spacing: 2px;
+    color: white;
+    font-size: 2.5rem;
+  }
+
+  #contact-body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid white;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+    background: lightgrey;
+    border-radius: 20px;
+    padding: 2vw;
+    /* box-shadow: 5px 5px 15px 5px black; */
+
+    #contact-name {
+      color: black;
+      font-size: 1.6rem;
+    }
+
+    #contact-background {
+      border-radius: 20px;
+      width: 105vw;
+      height: 110px;
+      position: absolute;
+      top: 0;
+    }
+
+    #contact-pp {
+      z-index: 999;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid white;
+    }
+    @media (max-width: 1023px) {
+      & {
+        width: 90vw;
+      }
+    }
+  }
+}
