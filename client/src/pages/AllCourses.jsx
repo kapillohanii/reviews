@@ -3,7 +3,6 @@ import Header from "../components/Header";
 // import { useHistory } from "react-router-dom"; // Import useHistory hook for navigation
 
 const SubjectsPage = () => {
-
   const handleSubjectClick = (subject) => {
     // Handle the click event for each subject button
     console.log(`Selected Subject: ${subject}`);
@@ -11,43 +10,62 @@ const SubjectsPage = () => {
   };
 
   return (
-    <><Header />
-    <div style={containerStyle}>
-      <div style={buttonsContainerStyle}>
-        <div style={columnStyle}>
-          <button onClick={() => handleSubjectClick("English")} style={buttonStyle}>
-            English
-          </button>
-          <button onClick={() => handleSubjectClick("Maths")} style={buttonStyle}>
-            Maths
-          </button>
+    <div style={{ display: "flex", flexDirection: "column", paddingTop: "70px" }}>
+      <Header />
+        <div style={containerStyle}>
+          <div style={buttonsContainerStyle}>
+            <div style={columnStyle}>
+              <button
+                onClick={() => handleSubjectClick("English")}
+                style={buttonStyle}
+              >
+                English
+              </button>
+              <button
+                onClick={() => handleSubjectClick("Maths")}
+                style={buttonStyle}
+              >
+                Maths
+              </button>
+            </div>
+            <div style={columnStyle}>
+              <button
+                onClick={() => handleSubjectClick("Science")}
+                style={buttonStyle}
+              >
+                Science
+              </button>
+              <button
+                onClick={() => handleSubjectClick("History")}
+                style={buttonStyle}
+              >
+                History
+              </button>
+            </div>
+            <div style={columnStyle}>
+              <button
+                onClick={() => handleSubjectClick("Geography")}
+                style={buttonStyle}
+              >
+                Geography
+              </button>
+              <button
+                onClick={() => handleSubjectClick("Art")}
+                style={buttonStyle}
+              >
+                Art
+              </button>
+            </div>
+          </div>
         </div>
-        <div style={columnStyle}>
-          <button onClick={() => handleSubjectClick("Science")} style={buttonStyle}>
-            Science
-          </button>
-          <button onClick={() => handleSubjectClick("History")} style={buttonStyle}>
-            History
-          </button>
-        </div>
-        <div style={columnStyle}>
-          <button onClick={() => handleSubjectClick("Geography")} style={buttonStyle}>
-            Geography
-          </button>
-          <button onClick={() => handleSubjectClick("Art")} style={buttonStyle}>
-            Art
-          </button>
-        </div>
-      </div>
     </div>
-    </>
   );
 };
 
 const containerStyle = {
   padding: "20px",
+  backgroundColor: "black",
 };
-
 
 const buttonsContainerStyle = {
   display: "flex",

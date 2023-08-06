@@ -31,7 +31,7 @@ const SideNav = () => {
           <li>Menu Item 2</li>
           <li>Menu Item 3</li>
         </ul>
-        <button>log out</button>
+        <a href="/login">log out</a>
       </div>
     </div>
   );

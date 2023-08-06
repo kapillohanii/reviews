@@ -8,14 +8,14 @@ const Header = () => {
   return (
     <header style={headerStyle}>
       <a href="/" style={logoContainerStyle}>
-        <img src={logo} alt="Logo" style={logoStyle}  />
+        <img src={logo} alt="Logo" style={logoStyle} />
       </a>
       <div style={navContainerStyle}>
         <div style={searchBarStyle}>
-          <FontAwesomeIcon icon={faSearch} size="xl"/> {/* Font Awesome Search Icon */}
+          <FontAwesomeIcon icon={faSearch} size="xl" /> {/* Font Awesome Search Icon */}
           {/* Your search bar implementation here */}
         </div>
-        <a style={{color:"black"}}href="/AllCourses">All Courses</a>
+        <a href="/AllCourses" style={linkStyle}>All Courses</a>
         <SideNav />{/* Font Awesome Burger Icon */}
         {/* Your navigation burger icon implementation here */}
       </div>
@@ -23,25 +23,37 @@ const Header = () => {
   );
 };
 
+
 const headerStyle = {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
   padding: "10px",
   background: "#f0ffff",
+  position: "fixed",
+  top: "0",
+  left: "0",
+  right: "0",
+  zIndex: "100",
 };
 
 const logoContainerStyle = {
   flex: "0",
-  margin: "15px"
+  margin: "15px",
 };
 
 const logoStyle = {
-  height: "50px", 
+  height: "50px",
 };
 
 const searchBarStyle = {
-    margin: "10px",
+  margin: "10px",
+};
+
+const linkStyle = {
+  color: "black",
+  textDecoration: "none",
+  marginLeft: "20px",
 };
 
 const navContainerStyle = {
@@ -49,6 +61,4 @@ const navContainerStyle = {
   alignItems: "center",
 };
 
-
 export default Header;
-
