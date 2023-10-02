@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import logo from "../images/reviews.png";
 import SideNav from "./Navbar";
+import { UserButton } from "@clerk/clerk-react";
 
 const Header = () => {
   return (
@@ -16,6 +17,7 @@ const Header = () => {
           {/* Your search bar implementation here */}
         </div>
         <a href="/AllCourses" style={linkStyle}>All Courses</a>
+        <UserButton  />
         <SideNav />{/* Font Awesome Burger Icon */}
         {/* Your navigation burger icon implementation here */}
       </div>
@@ -53,7 +55,7 @@ const searchBarStyle = {
 const linkStyle = {
   color: "black",
   textDecoration: "none",
-  marginLeft: "20px",
+  margin: "30px",
 };
 
 const navContainerStyle = {

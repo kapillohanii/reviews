@@ -1,20 +1,28 @@
 import './App.css';
-import {BrowserRouter,Routes,Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SubjectsPage from './pages/AllCourses';
 import Home from './pages/Home';
-import FormStructor from "./pages/login";
+import { ClerkProvider,RedirectToSignIn,SignedIn, SignedOut} from "@clerk/clerk-react"
 
+
+const clerkPubKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY
 function App() {
   return (
-    <div className="App">
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/AllCourses" element={<SubjectsPage />} />
-        <Route path="/login" element={<FormStructor />} />
-      </Routes>
-    </BrowserRouter>
-    </div>
+    <ClerkProvider publishableKey={clerkPubKey}>
+      <SignedIn>
+      <div className="App">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/AllCourses" element={<SubjectsPage />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+      </SignedIn>
+      <SignedOut>
+        <RedirectToSignIn />
+      </SignedOut>
+    </ClerkProvider>
   );
 }
 

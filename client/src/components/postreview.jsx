@@ -18,12 +18,12 @@ const PostReview = () => {
 
   return (
     <div className="form-container">
-      <h2 className="form-title">Beautiful Form</h2>
+      <h2 className="form-title">Beautiful Formz</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="title" >Course</label>
           <select className="select" value="Select Course">
-            <option disabled selected value="default">
+            <option selected value="default">
             Select Course
             </option>
           </select>
